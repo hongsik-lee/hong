@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      if (entry.boundingClientRect.top > 0) {
-        container.classList.remove("animating");
-      }
+      // if (entry.boundingClientRect.top > 0) {
+      //   container.classList.remove("animating");
+      // }
     });
   };
 
@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      if (entry.boundingClientRect.top > 0) {
-        container.classList.remove("fading-up");
-      }
+      // if (entry.boundingClientRect.top > 0) {
+      //   container.classList.remove("fading-up");
+      // }
     });
   };
 

@@ -218,3 +218,29 @@
 .calendar .item.sec::before {
     content: 'seconds';
 }
+.infomation {
+    height:60vh;
+    padding:50px;
+    box-sizing: border-box;
+}
+.infomation .reveal {
+    height: 60vh;
+}
+.infomation .col-box {
+    padding:30px 0;
+}
+.infomation .col-box + .col-box {
+    border-top:1px solid #eee;
+}
+.infomation .col-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 300;
+}
+.infomation .col-line + .col-line {
+    margin-top: 12px;
+}
+.infomation .col-line .bold {
+    font-weight: bold;
+}
