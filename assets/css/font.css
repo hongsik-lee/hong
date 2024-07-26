@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'NotoSans';
+  font-display: swap;
+  src: url('../font/Noto_Sans_KR/static/NotoSansKR-Thin.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'NotoSans';
+  font-display: swap;
+  src: url('../font/Noto_Sans_KR/static/NotoSansKR-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+    font-family: 'NotoSans';
+    font-display: swap;
+    src: url('../font/Noto_Sans_KR/static/NotoSansKR-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Dacing';
+  font-weight: 900;
+  font-display: swap;
+  src: url('../font/Dancing_Script/static/DancingScript-Bold.ttf') 
+}
+@font-face {
+    font-family: 'Dacing';
+    font-weight: 600;
+    font-display: swap;
+    src: url('../font/Dancing_Script/static/DancingScript-SemiBold.ttf') 
+}
+@font-face {
+    font-family: 'Dacing';
+    font-weight: 500;
+    font-display: swap;
+    src: url('../font/Dancing_Script/static/DancingScript-Medium.ttf') 
+}
+@font-face {
+    font-family: 'Dacing';
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/Dancing_Script/static/DancingScript-Regular.ttf') 
+}
