@@ -2,6 +2,46 @@
 body {
     background:#ffecee
 }
+.mask {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0,0,0,.8);
+    z-index: 99999;
+}
+@keyframes fallen_1 {
+    100% {
+        top: calc(100% + 20px);
+        transform: rotateX(-233070936026deg) rotateY(-1505794981590deg) rotateZ(-753941424566deg);
+   }
+}
+@keyframes fallen_2 {
+    100% {
+        top: calc(100% + 20px);
+        transform: rotateX(-2077634339070deg) rotateY(-1590228598864deg) rotateZ(-2044940232393deg);
+   }
+}
+@keyframes fallen_3 {
+    100% {
+        top: calc(100% + 20px);
+        transform: rotateX(-1102927046519deg) rotateY(-1781484039576deg) rotateZ(-1793482508272deg);
+   }
+}
+@keyframes fallen_4 {
+    100% {
+        top: calc(100% + 20px);
+        transform: rotateX(-1501826038202deg) rotateY(-320692051517deg) rotateZ(-1045719397955deg);
+   }
+}
+@keyframes fallen_5 {
+    100% {
+        top: calc(100% + 20px);
+        transform: rotateX(-236267320063deg) rotateY(-269934919128deg) rotateZ(-2059497871299deg);
+   }
+}
+
 .gowun-dodum-regular {
     font-family: "Gowun Dodum", sans-serif;
     font-weight: 400;
@@ -91,13 +131,12 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    top: 0;
-    left: auto;
     z-index: 99;
     color: #fff;
-    right: 8%;
-    top: 2%;
+    top: 4%;
     width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .color,
@@ -167,7 +206,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 90vh;
 }
 
 .calendar h2 {
@@ -178,6 +217,7 @@ body {
     padding-left: 20%;
     margin-bottom: 20px;
     color: #cf8f96;
+    line-height: normal;
 }
 
 .calendar .cal {
@@ -314,7 +354,7 @@ body {
 .location {
     margin-top: 120px;
     text-align: center;
-    height: 70vh;
+    height: 80vh;
 }
 .location .map {
     display: flex;
@@ -401,18 +441,20 @@ body {
     color: #333;
     line-height: normal;
 }
-.infomation .btn button {
-display: none;
+.infomation .account-wrap:nth-of-type(2) .account-tit {
+    color:#cf8f96
+}
+.infomation .account-wrap:nth-of-type(2) .account-list .txt strong {
+    color:#cf8f96
 }
 .infomation .btn a {
     border-radius: 4px;
     color: #5d5d5d;
     box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.1);
     text-decoration: none;
-    padding: 4px 12px;
+    padding: 6px 16px;
     font-size: 14px;
-    font-weight: bold;
-    border: 1px solid #5d5d5d;
+    border: 1px solid #bfbfbf;
 }
 .last {
     text-align: center;
@@ -424,4 +466,6 @@ display: none;
 }
 .last .image-wrap {
     margin-top: 60px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }

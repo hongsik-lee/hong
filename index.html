@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>한선우 ♥ 박주홍 결혼합니다.</title>
+    <meta property="og:title" content="한선우 ♥ 박주홍 결혼합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="2024년 9월 1일 일요일 오후 3시">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:image" content="assets/img/main3.jpeg" /> 
+    <meta property="og:title" content="웹사이트 이름" /> 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/common2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-   
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 </head>
 <body>
     <div class="wrap">
+        <div id="particle"></div>
         <div class="container main">
             <h2 class="fadeup txt">Our<br>Wedding<br>Day</h2>
             <div class="fadeup">
@@ -221,34 +223,31 @@
                         <li>
                             <div class="txt">
                                 <strong>신랑</strong>
-                                <p>110-1123-324412</p>
+                                <p id="account1">110-1123-324412</p>
                                 <p>카카오 한선우</p>
                             </div>
                             <div class="btn">
-                                <button class="clipboard">110-1123-324412</button>
-                                <a href="javascript:void();">복사</a>
+                                <a href="javascript:void();" onclick="copy('account1');return false;">복사</a>
                             </div>
                         </li>
                         <li>
                             <div class="txt">
                                 <strong>신랑 아버지</strong>
-                                <p>110-1123-324412</p>
+                                <p id="account2">110-1123-324412</p>
                                 <p>카카오 한선우</p>
                             </div>
                             <div class="btn">
-                                <button class="clipboard">110-1123-324412</button>
-                                <a href="javascript:void();">복사</a>
+                                <a href="javascript:void();" onclick="copy('account2');return false;">복사</a>
                             </div>
                         </li>
                         <li>
                             <div class="txt">
                                 <strong>신랑 어머니</strong>
-                                <p>110-1123-324412</p>
+                                <p id="account3">110-1123-324412</p>
                                 <p>카카오 한선우</p>
                             </div>
                             <div class="btn">
-                                <button class="clipboard">110-1123-324412</button>
-                                <a href="javascript:void();">복사</a>
+                                <a href="javascript:void();" onclick="copy('account3');return false;">복사</a>
                             </div>
                         </li>
                     </ul>
@@ -259,34 +258,31 @@
                         <li>
                             <div class="txt">
                                 <strong>신부</strong>
-                                <p>110-1123-324412</p>
+                                <p id="account4">110-1123-324412</p>
                                 <p>카카오 박주홍</p>
                             </div>
                             <div class="btn">
-                                <button class="clipboard">110-1123-324412</button>
-                                <a href="javascript:void();">복사</a>
+                                <a href="javascript:void();" onclick="copy('account4');return false;">복사</a>
                             </div>
                         </li>
                         <li>
                             <div class="txt">
                                 <strong>신부 아버지</strong>
-                                <p>110-1123-324412</p>
+                                <p id="account5">110-1123-324412</p>
                                 <p>카카오 박주홍</p>
                             </div>
                             <div class="btn">
-                                <button class="clipboard">110-1123-324412</button>
-                                <a href="javascript:void();">복사</a>
+                                <a href="javascript:void();" onclick="copy('account5');return false;">복사</a>
                             </div>
                         </li>
                         <li>
                             <div class="txt">
                                 <strong>신부 어머니</strong>
-                                <p>110-1123-324412</p>
+                                <p id="account6">110-1123-324412</p>
                                 <p>카카오 박주홍</p>
                             </div>
                             <div class="btn">
-                                <button class="clipboard">110-1123-324412</button>
-                                <a href="javascript:void();">복사</a>
+                                <a href="javascript:void();" onclick="copy('account6');return false;">복사</a>
                             </div>
                         </li>
                     </ul>
@@ -303,6 +299,9 @@
             </div>
         </div>
     </div>
+    <!-- <div class="mask">
+        <div id="particle"></div>
+    </div> -->
     <script>
         
     var swiper = new Swiper(".mySwiper", {
@@ -322,7 +321,6 @@
       },
     });
     </script>
-        <!-- 3. 실행 스크립트 -->
     <script charset="UTF-8">
         new daum.roughmap.Lander({
             "timestamp" : "1722229802074",

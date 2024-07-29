@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // IMAGE ANIMATION
-
   let revealCallback = (entries) => {
     entries.forEach((entry) => {
       let container = entry.target;
@@ -30,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // TEXT ANIMATION
-
   let fadeupCallback = (entries) => {
     entries.forEach((entry) => {
       let container = entry.target;
@@ -53,6 +51,76 @@ document.addEventListener("DOMContentLoaded", function () {
     fadeupObserver.observe(fadeup);
   });
 });
+class Particle{
+  constructor(id, opt) {
+    this.box = document.getElementById(id);
+    this.number = opt.number || 100;
+    this.colors = this.handleArrayParams(opt.colors) || ['#400606', '#c7b4aa', '#ffffff'];
+    this.width = opt.width || 15;
+    this.height = opt.height || 7;
+    this.duration = opt.duration || 6000;
+    this.delay = opt.delay || 6000;
+  }
+  handleArrayParams(arr) {
+    return Array.isArray(arr) && arr.length > 0 && arr.every(el => el[0]==='#') ? arr : false;
+  }
+  getRandom(max, min = 0) {
+    min = Math.ceil(min);
+    max = Math.floor(max+1);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+  getRange(num, range = 0.5){
+    const symbol = Math.random() > 0.5 ? +1 : -1;
+    return num + this.getRandom(Math.floor(num * range)) * symbol;
+  }
+  start() {
+    for(let i = 0; i < this.number; i++){
+      const temp = document.createElement('span');
+      temp.style.cssText += `
+        position: absolute;
+        transform-style: preserve-3d;
+        animation-timing-function: cubic-bezier(${this.getRandom(3)*0.1}, 0, 1, 1);
+        animation-iteration-count: infinite;
+        width: ${this.getRange(this.width, 0.7)}px;
+        height: ${this.getRange(this.height, 0.7)}px;
+        top: -${this.width * 2}px;
+        left: calc(${this.getRandom(100)}% - ${this.width*0.5}px);
+        background-color: ${this.colors[this.getRandom(this.colors.length-1)]};
+        animation-name: fallen_${this.getRandom(5, 1)};
+        animation-duration: ${this.getRange(this.duration)}ms;
+        animation-delay: ${this.getRange(this.delay)}ms;
+       `;
+      this.box.append(temp);
+    }
+  }
+}
+const party = new Particle('particle', { number: 200, colors: ['#ffca76', '#ffb9b9', '#fff180'] });
+party.start();
+
+function copy(id){
+  var r = document.createRange();
+  r.selectNode(document.getElementById(id));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  alert('복사되었습니다.')
+}
+
+
+// const mask = document.querySelector('.mask');
+// const html = document.querySelector('html');
+
+// html.style.overflow = 'hidden'; 
+// window.addEventListener('load', function () {
+ 
+//   setTimeout(function () {
+//     mask.style.opacity = '0';
+//     html.style.overflow = 'auto';
+//     mask.style.display = 'none';
+//   }, 8000);
+// })
+
 
 // const scrollSection = document.querySelector('.horizontal-scroll__section');
 // const scrollContent = document.querySelector('.horizontal-scroll__content');
@@ -73,8 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //        }
 // });
 
-
-
 // Dday Counter
 const Dday= document.querySelector(".day");
 const Dhour = document.querySelector(".hour");
@@ -84,27 +150,16 @@ const Dsec = document.querySelector(".sec");
 const getDDay = () => {
   const setDate = new Date("2024-09-01T13:00:00+0900");
   const setDateYear = setDate.getFullYear();
-  // getMonth 메서드는 0부터 세기 때문에 +1 해준다.
   const setDateMonth = setDate.getMonth() + 1;
   const setDateDay = setDate.getDate();
-
-  // 현재 날짜를 new 연산자를 사용해서 Date 객체를 생성
   const now = new Date();
-
-  // D-Day 날짜에서 현재 날짜의 차이를 getTime 메서드를 사용해서 밀리초의 값으로 가져온다. 
   const distance = setDate.getTime() - now.getTime();
   
-  // Math.floor 함수를 이용해서 근접한 정수값을 가져온다.
-  // 밀리초 값이기 때문에 1000을 곱한다. 
-  // 1000*60 => 60초(1분)*60 => 60분(1시간)*24 = 24시간(하루)
-  // 나머지 연산자(%)를 이용해서 시/분/초를 구한다.
   const day = Math.floor(distance/(1000*60*60*24));
   const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
   const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
   const seconds = Math.floor((distance % (1000*60))/1000);
 
-  // D-Day 날짜를 가져오고,
-  // 삼항 연산자를 사용해서 값이 10보다 작을 경우에 대해 조건부 렌더링을 해준다.
   Dday.innerText = `${day}`;
   Dhour.innerText =  `${hours < 10 ? `0${hours}` : hours}`;
   Dmin.innerText = `${minutes < 10 ? `0${minutes}` : minutes}`;
@@ -113,9 +168,7 @@ const getDDay = () => {
   }
 
 const init = () => {
-  // init 함수 생성해서 getDDay함수 호출하고,
   getDDay();
-  // setInterval 메서드에서 getDDay함수를 1초(1000밀리초)마다 호출한다.
   setInterval(getDDay, 1000);
 }
 
