@@ -179,7 +179,9 @@ body {
     margin-top: 20px;
     text-align: center;
 }
-
+.intro .point {
+    color:#cf8f96
+}
 .intro .txt .color {
     font-weight: bold;
     margin-bottom: 20px;
