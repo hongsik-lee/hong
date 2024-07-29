@@ -108,18 +108,18 @@ function copy(id){
 }
 
 
-// const mask = document.querySelector('.mask');
-// const html = document.querySelector('html');
+const mask = document.querySelector('#particle');
+const html = document.querySelector('html');
 
 // html.style.overflow = 'hidden'; 
-// window.addEventListener('load', function () {
+window.addEventListener('load', function () {
  
-//   setTimeout(function () {
-//     mask.style.opacity = '0';
-//     html.style.overflow = 'auto';
-//     mask.style.display = 'none';
-//   }, 8000);
-// })
+  setTimeout(function () {
+    mask.style.opacity = '0';
+    html.style.overflow = 'auto';
+    mask.style.display = 'none';
+  }, 10000);
+})
 
 
 // const scrollSection = document.querySelector('.horizontal-scroll__section');
