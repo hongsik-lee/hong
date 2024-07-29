@@ -322,6 +322,7 @@ body {
 }
 .gallery {
     margin:50px 0;
+    height: 100vh;
 }
 .gallery .sub-tit {
     font-size: 18px;
