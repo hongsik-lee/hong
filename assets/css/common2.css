@@ -344,9 +344,84 @@ body {
 }
 .infomation {
     text-align: center;
+    padding:0 30px;
+    box-sizing: border-box;
 }
 .infomation .sub-txt {
     line-height: 1.6;
     font-size: 14px;
 }
-.infomation .account-tit {}
+.infomation .account-tit {
+    padding: 12px;
+    border: 1px solid #afafaf;
+    border-radius: 12px;
+    text-align: left;
+    color: #5f8b9b;
+}
+.infomation .account-wrap {
+    margin-top: 40px;
+}
+.infomation .account-wrap + .account-wrap {
+    margin-top:20px;
+}
+.infomation .account-list {
+    max-height: 0;
+    display: none;
+}
+.infomation .account-tit.active + .account-list {
+    display: block;
+}
+
+.infomation .account-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #afafaf;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #afafaf;
+    border-top: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.infomation .account-list .txt {
+    text-align: left;
+}
+.infomation .account-list .txt strong {
+    display: block;
+    margin:8px 0;
+    color: #5f8b9b;
+    font-weight: bold;
+}
+.infomation .account-list p {
+    margin:3px 0;
+    font-size: 14px;
+    color: #333;
+    line-height: normal;
+}
+.infomation .btn button {
+display: none;
+}
+.infomation .btn a {
+    border-radius: 4px;
+    color: #5d5d5d;
+    box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    padding: 4px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #5d5d5d;
+}
+.last {
+    text-align: center;
+}
+.last p {
+    font-size: 16px;
+    color:#333;
+    line-height: normal;
+}
+.last .image-wrap {
+    margin-top: 60px;
+}

@@ -216,7 +216,7 @@
                     너그러운 마음으로 양해 부탁드립니다.
                 </p>
                 <div class="account-wrap">
-                    <div class="account-tit">신랑측</div>
+                    <div class="account-tit" onclick="collapse(this);">신랑측</div>
                     <ul class="account-list">
                         <li>
                             <div class="txt">
@@ -225,7 +225,8 @@
                                 <p>카카오 한선우</p>
                             </div>
                             <div class="btn">
-                                <a href="#">복사</a>
+                                <button class="clipboard">110-1123-324412</button>
+                                <a href="javascript:void();">복사</a>
                             </div>
                         </li>
                         <li>
@@ -235,7 +236,8 @@
                                 <p>카카오 한선우</p>
                             </div>
                             <div class="btn">
-                                <a href="#">복사</a>
+                                <button class="clipboard">110-1123-324412</button>
+                                <a href="javascript:void();">복사</a>
                             </div>
                         </li>
                         <li>
@@ -245,13 +247,14 @@
                                 <p>카카오 한선우</p>
                             </div>
                             <div class="btn">
-                                <a href="#">복사</a>
+                                <button class="clipboard">110-1123-324412</button>
+                                <a href="javascript:void();">복사</a>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="account-wrap">
-                    <div class="account-tit">신부측</div>
+                    <div class="account-tit" onclick="collapse(this);">신부측</div>
                     <ul class="account-list">
                         <li>
                             <div class="txt">
@@ -260,7 +263,8 @@
                                 <p>카카오 박주홍</p>
                             </div>
                             <div class="btn">
-                                <a href="#">복사</a>
+                                <button class="clipboard">110-1123-324412</button>
+                                <a href="javascript:void();">복사</a>
                             </div>
                         </li>
                         <li>
@@ -270,7 +274,8 @@
                                 <p>카카오 박주홍</p>
                             </div>
                             <div class="btn">
-                                <a href="#">복사</a>
+                                <button class="clipboard">110-1123-324412</button>
+                                <a href="javascript:void();">복사</a>
                             </div>
                         </li>
                         <li>
@@ -280,7 +285,8 @@
                                 <p>카카오 박주홍</p>
                             </div>
                             <div class="btn">
-                                <a href="#">복사</a>
+                                <button class="clipboard">110-1123-324412</button>
+                                <a href="javascript:void();">복사</a>
                             </div>
                         </li>
                     </ul>
@@ -290,8 +296,10 @@
         <div class="container last">
             <div class="reveal">
                 <p>함께한시간</p>
-                <p></p>
-               
+                <p class="dDay"></p>
+                <div class="image-wrap">
+                    <img src="assets/img/2.png" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -322,6 +330,8 @@
             "mapWidth" : "390",
             "mapHeight" : "360"
         }).render();
+    </script>
+    <script>
     </script>
      <script src="assets/js/common.js"></script>    
 </body>
